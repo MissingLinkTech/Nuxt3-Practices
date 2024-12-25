@@ -7,6 +7,6 @@
 
 <script setup>
 const store = useCounterStore();
-const { increment } = store
+const { increment } = store;
 const { getCount } = storeToRefs(store);
 </script>
