@@ -10,9 +10,7 @@ export const comments = [
           {
             id: 2,
             body: "Reply to root comment.",
-            replies: [
-              { id: 3, body: "Reply to reply." },
-            ],
+            replies: [{ id: 3, body: "Reply to reply." }],
           },
           { id: 4, body: "Another reply to root comment." },
         ],
@@ -47,7 +45,11 @@ export const comments = [
       },
     ],
   },
-  { id: 4, name: "Sarah Jones", comments: [{ id: 10, body: "Fourth root comment." }] },
+  {
+    id: 4,
+    name: "Sarah Jones",
+    comments: [{ id: 10, body: "Fourth root comment." }],
+  },
   {
     id: 5,
     name: "Michael Brown",
@@ -106,7 +108,11 @@ export const comments = [
       },
     ],
   },
-  { id: 8, name: "Linda Anderson", comments: [{ id: 23, body: "Eighth root comment." }] },
+  {
+    id: 8,
+    name: "Linda Anderson",
+    comments: [{ id: 23, body: "Eighth root comment." }],
+  },
   {
     id: 9,
     name: "Thomas Moore",
@@ -130,7 +136,11 @@ export const comments = [
       },
     ],
   },
-  { id: 11, name: "Daniel Baker", comments: [{ id: 30, body: "Eleventh root comment." }] },
+  {
+    id: 11,
+    name: "Daniel Baker",
+    comments: [{ id: 30, body: "Eleventh root comment." }],
+  },
   { id: 12, name: "Christopher Lewis", comments: [] },
   { id: 13, name: "Barbara Hall", comments: [] },
   { id: 14, name: "Roy Walker", comments: [] },

@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxt/image"],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@pinia/nuxt"],
   app: {
     head: {
       title: "My Nuxt App",
@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      baseURL: process.env.NUXT_APP_API_BASE_URL
-    }
-  }
+      baseURL: process.env.NUXT_APP_API_BASE_URL,
+    },
+  },
 });

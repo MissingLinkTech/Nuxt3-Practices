@@ -1,1 +1,1 @@
-export type methods = 'POST' | 'GET' | 'PUT' | 'PATCH' | 'DELETE'
+export type methods = "POST" | "GET" | "PUT" | "PATCH" | "DELETE";
