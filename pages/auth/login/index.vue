@@ -1,66 +1,46 @@
 <template>
-  <div>
-    {{ productsData }}
-    <h1>Login</h1>
-    <form @submit.prevent="handleLogin">
-      <p>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          v-model="formData.username"
-        />
-      </p>
-      <p>
-        <input
-          type="password"
-          name="password"
-          placeholder="**********"
-          v-model="formData.password"
-        />
-      </p>
-      <button type="submit">Login</button>
-    </form>
+  <div class="login-container">
+    <UCard class="login-card">
+      <template #header>
+        <h2>Login</h2>
+      </template>
+      <UForm :state="formData" class="space-y-4" @submit.prevent="handleLogin">
+        <UFormGroup label="Email" name="email">
+          <UInput v-model="formData.username" />
+        </UFormGroup>
+        <UFormGroup label="Password" name="password">
+          <UInput v-model="formData.password" type="password" />
+        </UFormGroup>
+        <UButton type="submit" :loading="loading" class="login-button">Login</UButton>
+      </UForm>
+    </UCard>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { type ILoginInput } from "~/interfaces/Ilogin";
-import type { IProduct } from "~/interfaces/product";
 
 const { $api }: any = useNuxtApp();
 const formData = reactive<ILoginInput>({
   username: "emilys",
   password: "emilyspass",
 });
-const productsData = ref<IProduct[]>([]);
+const loading = ref<boolean>(false);
 async function handleLogin(): Promise<void> {
   try {
+    loading.value = true;
     const credentials: ILoginInput = {
       username: formData.username,
       password: formData.password,
     };
-    console.log($api);
     const response = await $api.auth.login(credentials);
     console.log(response);
   } catch (error) {
     console.log(error, "error");
+  } finally {
+    loading.value = false;
   }
 }
-
-async function getAllProducts() {
-  try {
-    return await $api.product.getAllProducts();
-  } catch (error) {
-    console.log(error, "err");
-  }
-}
-
-onMounted(async () => {
-  const res = await getAllProducts();
-  const products: IProduct[] = res.products;
-  console.log(products);
-});
 </script>
 
 <style scoped></style>

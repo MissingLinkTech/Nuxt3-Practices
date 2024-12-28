@@ -5,9 +5,9 @@ export default defineNuxtConfig({
   modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@pinia/nuxt"],
   app: {
     head: {
-      title: "My Nuxt App",
+      title: "Nuxt E-commerce",
       meta: [
-        { name: "description", content: "Everything abount nuxt" },
+        { name: "description", content: "E-commerce - Nuxt - DummyJson" },
         { name: "viewport", content: "width=device-width, initial-scale=1.0" },
       ],
       link: [
