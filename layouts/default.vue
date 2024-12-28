@@ -19,6 +19,9 @@
       <li>
         <NuxtLink to="/mention">Mention</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/dynamic-component">Dynamic component</NuxtLink>
+      </li>
     </ul>
     <main>
       <slot />
