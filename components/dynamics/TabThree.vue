@@ -1,5 +1,3 @@
 <template>
-    <div>
-        Tab three component
-    </div>
+  <div>Tab three component</div>
 </template>

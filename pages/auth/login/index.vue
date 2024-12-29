@@ -11,7 +11,9 @@
         <UFormGroup label="Password" name="password">
           <UInput v-model="formData.password" type="password" />
         </UFormGroup>
-        <UButton type="submit" :loading="loading" class="login-button">Login</UButton>
+        <UButton type="submit" :loading="loading" class="login-button"
+          >Login</UButton
+        >
       </UForm>
     </UCard>
   </div>

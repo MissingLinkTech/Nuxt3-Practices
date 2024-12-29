@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <TabsWrapper />
-    </div>
+  <div>
+    <TabsWrapper />
+  </div>
 </template>
